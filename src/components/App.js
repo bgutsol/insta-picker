@@ -4,7 +4,6 @@ import React from "react";
 import { hot } from "react-hot-loader";
 
 import AboutPage from "./AboutPage";
-import InstagramLogin from "./containers/InstagramLogin";
 import HomePage from "./HomePage";
 import NotFoundPage from "./NotFoundPage";
 

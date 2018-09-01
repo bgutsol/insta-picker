@@ -3,7 +3,7 @@ import React from 'react';
 const CLIENT_ID = 'daad44e65eb14a50b73c6adcf23262a4';
 const REDIRECT_URI = 'http://localhost:3000/';
 
-export class InstagremLogin extends React.Component {
+export class InstagramLogin extends React.Component {
 
   onBtnClick() {
     const scope = 'public_content';
@@ -40,4 +40,4 @@ export class InstagremLogin extends React.Component {
   }
 }
 
-export default InstagremLogin
+export default InstagramLogin
