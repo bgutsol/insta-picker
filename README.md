@@ -1,1 +1,1 @@
-# insta-picker app
+# tag-picker app

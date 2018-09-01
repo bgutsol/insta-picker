@@ -1,5 +1,5 @@
 {
-  "name": "insta-picker",
+  "name": "tag-picker",
   "version": "0.1.0",
   "description": "React + Redux web-app, using instagram public API and Oauth 2.0",
   "engines": {
@@ -30,6 +30,9 @@
   "author": "bohdan.hutsol",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.4",
+    "@fortawesome/free-solid-svg-icons": "5.3.1",
+    "@fortawesome/react-fontawesome": "0.1.2",
     "object-assign": "4.1.1",
     "react": "16.4.2",
     "react-dom": "16.4.2",
@@ -175,7 +178,7 @@
       "es6": true,
       "browser": true,
       "node": true,
-      "jest": true
+      "jest": false
     },
     "globals": {}
   }
