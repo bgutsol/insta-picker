@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin'; 
+import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 export default {
   resolve: {
@@ -27,7 +27,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
-      template: 'src/index.ejs',
+      template: 'src/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true
