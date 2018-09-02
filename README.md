@@ -1,5 +1,3 @@
-# tag-picker app
-
 ## Build Setup
 
 ``` bash
@@ -16,7 +14,7 @@ npm run build
 npm run lint
 ```
 
-## Check live on
+## Check live
 
 [Tag-picker](https://tag-picker.netlify.com/)
 
