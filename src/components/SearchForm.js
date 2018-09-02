@@ -4,9 +4,9 @@ import Input from './Input';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
-const SearchForm = ({onChange, value}) => {
+const SearchForm = ({onChange, onSubmit, value}) => {
   return (
-    <form className='search-form' onSubmit={onChange}>
+    <form className='search-form' onSubmit={onSubmit}>
       <Input className='search-form__input' onChange={onChange} value={value}/>
       <button className='search-form__btn'>
         <FontAwesomeIcon icon={faSearch}/>

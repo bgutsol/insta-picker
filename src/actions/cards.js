@@ -2,7 +2,8 @@ import axios from 'axios';
 import {
   GET_CARDS_LIST,
   GET_CARDS_LIST_SUCCESS,
-  GET_CARDS_LIST_FAIL
+  GET_CARDS_LIST_FAIL,
+  SET_SEARCH_TAG
 } from '../constants/actionTypes';
 
 export function getCardsListRequest () {
@@ -25,14 +26,12 @@ export function getCardsListRequestFail (error) {
   };
 }
 
-export function fetchCardsList (accessToken, tagName) {
+export function fetchCardsList (accessToken, tag) {
   return (dispatch, getState) => {
     dispatch(getCardsListRequest());
 
-    const API_URL = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}`;
-    /*const API_URL = `https://api.instagram.com/v1/tags/${tagName}/media/recent?access_token=${accessToken}`;*/
-
-    console.log('fetching');
+    /*const API_URL = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}`;*/
+    const API_URL = `https://api.instagram.com/v1/tags/${tag}/media/recent?access_token=${accessToken}`;
 
     axios.get(API_URL)
       .then(function (response) {
@@ -41,5 +40,12 @@ export function fetchCardsList (accessToken, tagName) {
       .catch(function (error) {
         dispatch(getCardsListRequestFail(error));
       });
+  };
+}
+
+export function setSearchTag (tag) {
+  return {
+    type: SET_SEARCH_TAG,
+    tag
   };
 }

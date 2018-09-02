@@ -10,13 +10,6 @@ export class InstagramLogin extends React.Component {
     window.location.href = `https://api.instagram.com/oauth/authorize/?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${scope}&response_type=token`
   }
 
-  componentDidMount() {
-    const matches = window.location.hash.match(/=(.*)/);
-    if (matches) {
-      console.log(matches[1])
-    }
-  }
-
   render() {
     const style = {
       background: '#000',
