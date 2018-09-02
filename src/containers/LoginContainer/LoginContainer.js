@@ -4,6 +4,7 @@ import Login from 'Components/Login';
 
 export class InstagramLogin extends React.Component {
   handleLoginClick() {
+    // eslint-disable-next-line no-undef
     const redirectUrl = __webpack_public_path__;
 
     window.location.href = `https://api.instagram.com/oauth/authorize/?client_id=${INSTAGRAM_CLIENT_ID}&redirect_uri=${redirectUrl}&scope=public_content&response_type=token`

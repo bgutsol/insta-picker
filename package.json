@@ -17,14 +17,8 @@
     "lint:watch": "npm run lint -- --watch",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",
-    "prebuild": "npm run lint && npm run test && npm run clean-dist",
-    "build": "babel-node tools/build.js && npm run open:dist",
-    "test": "jest",
-    "test:CI": "babel-node tools/testCi.js",
-    "test:cover": "npm run test -- --coverage ",
-    "test:cover:CI": "npm run test:CI -- --coverage && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
-    "test:watch": "jest --watch",
-    "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
+    "prebuild": "npm run lint && npm run clean-dist",
+    "build": "babel-node tools/build.js",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
   "author": "bohdan.hutsol",
@@ -180,6 +174,9 @@
       "browser": true,
       "node": true,
       "jest": false
+    },
+    "rules": {
+      "import/no-unresolved": false
     },
     "globals": {}
   }

@@ -29,7 +29,7 @@ export function getCardsListRequestFail (error) {
 }
 
 export function fetchCardsList (accessToken, tag) {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     dispatch(getCardsListRequest());
 
     axios.get(getInstagramMediaByTag(accessToken, tag))
