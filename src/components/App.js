@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import React from "react";
 import { hot } from "react-hot-loader";
 
-import AboutPage from "./AboutPage";
-import HomePage from "./HomePage";
-import NotFoundPage from "./NotFoundPage";
+import AboutPage from "Components/AboutPage";
+import HomePage from "Components/HomePage";
+import NotFoundPage from "Components/NotFoundPage";
 
 class App extends React.Component {
   render() {

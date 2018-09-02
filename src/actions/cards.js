@@ -4,7 +4,8 @@ import {
   GET_CARDS_LIST_SUCCESS,
   GET_CARDS_LIST_FAIL,
   SET_SEARCH_TAG
-} from '../constants/actionTypes';
+} from 'Constants/actionTypes';
+import { getInstagramMediaByTag } from 'Constants/api'
 
 export function getCardsListRequest () {
   return {
@@ -30,10 +31,7 @@ export function fetchCardsList (accessToken, tag) {
   return (dispatch, getState) => {
     dispatch(getCardsListRequest());
 
-    /*const API_URL = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}`;*/
-    const API_URL = `https://api.instagram.com/v1/tags/${tag}/media/recent?access_token=${accessToken}`;
-
-    axios.get(API_URL)
+    axios.get(getInstagramMediaByTag(accessToken, tag))
       .then(function (response) {
         dispatch(getCardsListRequestSucccess(response.data.data));
       })

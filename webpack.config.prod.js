@@ -11,9 +11,22 @@ const GLOBALS = {
   __DEV__: false
 };
 
+function resolve (dir) {
+  return path.resolve(__dirname, dir);
+}
+
 export default {
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      'Components': resolve('src/components'),
+      'Containers': resolve('src/containers'),
+      'Constants': resolve('src/constants'),
+      'Layouts': resolve('src/layouts'),
+      'Actions': resolve('src/actions'),
+      'Reducers': resolve('src/reducers'),
+      'Styles': resolve('src/styles'),
+    }
   },
   devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
   entry: path.resolve(__dirname, 'src/index'),

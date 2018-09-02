@@ -1,11 +1,11 @@
 import React from 'react';
-import HomePageContainer from './containers/HomePageContainer';
+import UserContainer from 'Containers/UserContainer';
 
 const HomePage = () => {
   return (
     <div>
       <h1>Tag Picker</h1>
-      <HomePageContainer/>
+      <UserContainer/>
     </div>
   );
 };

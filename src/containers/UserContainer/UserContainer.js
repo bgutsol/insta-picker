@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchContainer from './SearchContainer';
-import InstagramLogin from './InstagramLogin';
 import { withCookies } from 'react-cookie';
 import { withRouter } from 'react-router-dom';
+import SearchContainer from 'Containers/SearchContainer';
+import LoginContainer from 'Containers/LoginContainer';
 
 class HomePageContainer extends React.Component {
 
@@ -33,7 +33,7 @@ class HomePageContainer extends React.Component {
     if (accessToken) {
       return <SearchContainer accessToken={accessToken}/>;
     } else {
-      return <InstagramLogin/>;
+      return <LoginContainer/>;
     }
   }
 

@@ -3,9 +3,22 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
+function resolve (dir) {
+  return path.resolve(__dirname, dir);
+}
+
 export default {
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      'Components': resolve('src/components'),
+      'Containers': resolve('src/containers'),
+      'Constants': resolve('src/constants'),
+      'Layouts': resolve('src/layouts'),
+      'Actions': resolve('src/actions'),
+      'Reducers': resolve('src/reducers'),
+      'Styles': resolve('src/styles'),
+    }
   },
   devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
   entry: [

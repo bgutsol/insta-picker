@@ -3,7 +3,7 @@ import {
   GET_CARDS_LIST_SUCCESS,
   GET_CARDS_LIST_FAIL,
   SET_SEARCH_TAG
-} from '../constants/actionTypes';
+} from 'Constants/actionTypes';
 import initialState from './initialState';
 
 const list = function (state = initialState.cards, action) {

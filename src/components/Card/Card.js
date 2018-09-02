@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
-const SearchList = ({ cards }) => {
+const Card = ({ cards }) => {
   console.log(cards);
 
   return (
@@ -14,4 +14,4 @@ const SearchList = ({ cards }) => {
 };
 
 
-export default SearchList;
+export default Card;

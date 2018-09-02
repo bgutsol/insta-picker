@@ -3,7 +3,7 @@ import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
-import rootReducer from '../reducers';
+import rootReducer from 'Reducers';
 export const history = createHistory();
 
 function configureStoreProd(initialState) {

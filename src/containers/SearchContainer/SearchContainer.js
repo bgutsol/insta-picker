@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as actions from '../../actions/cards';
-import SearchForm from '../SearchForm';
-import SearchList from '../SearchList';
+import * as actions from 'Actions/cards';
+import SearchForm from 'Components/SearchForm';
+import CardsList from 'Components/CardsList';
 
 export class SearchContainer extends React.Component {
   handleInputChange = e => {
@@ -41,7 +41,7 @@ export class SearchContainer extends React.Component {
         />
         {hasError && 'has Error'}
         {isLoading && 'Loading...'}
-        <SearchList cards={cards}/>
+        <CardsList cards={cards}/>
       </div>
     );
   }

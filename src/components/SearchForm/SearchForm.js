@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from './Input';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import Input from 'Components/Input';
 
 const SearchForm = ({onChange, onSubmit, value}) => {
   return (
