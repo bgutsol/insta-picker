@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSearch} from '@fortawesome/free-solid-svg-icons';
 
-const Card = ({ cards }) => {
-  console.log(cards);
+const Card = ({ thumbnail }) => {
 
   return (
-    <ul>
-      <li>cards</li>
-    </ul>
+    <article className='card'>
+      <div className="card__image">
+        <img className='card__img-i' src={thumbnail} alt=''/>
+      </div>
+    </article>
   );
 };
 

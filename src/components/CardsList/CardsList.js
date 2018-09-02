@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import Card from 'Components/Card';
 
 const CardsList = ({ cards }) => {
   console.log(cards);

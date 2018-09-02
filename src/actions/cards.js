@@ -5,7 +5,8 @@ import {
   GET_CARDS_LIST_FAIL,
   SET_SEARCH_TAG
 } from 'Constants/actionTypes';
-import { getInstagramMediaByTag } from 'Constants/api'
+import { getInstagramMediaByTag } from 'Constants/api';
+import { preprocessCardsFromData } from '../utils/cards';
 
 export function getCardsListRequest () {
   return {
@@ -32,12 +33,12 @@ export function fetchCardsList (accessToken, tag) {
     dispatch(getCardsListRequest());
 
     axios.get(getInstagramMediaByTag(accessToken, tag))
-      .then(function (response) {
-        dispatch(getCardsListRequestSucccess(response.data.data));
+      .then(response => {
+        const cards = preprocessCardsFromData(response.data);
+
+        dispatch(getCardsListRequestSucccess(cards))
       })
-      .catch(function (error) {
-        dispatch(getCardsListRequestFail(error));
-      });
+      .catch(error => dispatch(getCardsListRequestFail(error)));
   };
 }
 
