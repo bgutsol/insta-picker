@@ -1,0 +1,13 @@
+@import 'Styles/_configs.scss';
+
+.users-list{
+  &__item{
+    margin-top: 3rem;
+
+    &-title{
+      font-size: 4rem;
+      font-family: $secondary-font;
+      color: $black;
+    }
+  }
+}

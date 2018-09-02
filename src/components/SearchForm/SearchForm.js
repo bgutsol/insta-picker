@@ -3,16 +3,23 @@ import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import Input from 'Components/Input';
+import './SearchForm.scss';
 
 const SearchForm = ({onChange, onSubmit, value}) => {
   return (
     <form className='search-form' onSubmit={onSubmit}>
-      <Input className='search-form__input' onChange={onChange} value={value}/>
+      <input className='search-form__input' type='text' onChange={onChange} value={value} placeholder='hashtag'/>
       <button className='search-form__btn'>
-        <FontAwesomeIcon icon={faSearch}/>
+        <FontAwesomeIcon icon={faSearch} size='2x'/>
       </button>
     </form>
   );
+};
+
+SearchForm.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 };
 
 

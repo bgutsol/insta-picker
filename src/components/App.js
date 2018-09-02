@@ -9,14 +9,13 @@ import NotFoundPage from "Components/NotFoundPage";
 
 class App extends React.Component {
   render() {
-    const activeStyle = { color: 'blue' };
+    const activeClassName = 'main-nav__link--active';
     return (
-      <div>
-        <div>
-          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-          {' | '}
-          <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
-        </div>
+      <div className='row'>
+        <nav className='main-nav'>
+          <NavLink exact to="/" className='main-nav__link' activeClassName={activeClassName}>Home</NavLink>
+          <NavLink to="/about" className='main-nav__link' activeClassName={activeClassName}>About</NavLink>
+        </nav>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />

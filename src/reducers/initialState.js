@@ -1,8 +1,9 @@
 export default {
   cards: {
-    cards: [],
+    cards: {},
     searchTag: '',
     isLoading: false,
+    isLoaded: false,
     hasError: false
   }
 };

@@ -12,6 +12,7 @@ const list = function (state = initialState.cards, action) {
       return {
         ...state,
         isLoading: true,
+        isLoaded: false,
         hasError: false
       };
     case GET_CARDS_LIST_SUCCESS:
@@ -19,11 +20,14 @@ const list = function (state = initialState.cards, action) {
         ...state,
         cards: action.data,
         isLoading: false,
+        isLoaded: true
       };
     case GET_CARDS_LIST_FAIL:
       return {
         ...state,
-        hasError: true
+        hasError: true,
+        isLoading: false,
+        isLoaded: true
       };
     case SET_SEARCH_TAG:
       return {

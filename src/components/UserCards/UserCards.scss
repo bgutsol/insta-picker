@@ -1,0 +1,12 @@
+@import 'Styles/_configs.scss';
+
+.user-cards{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3em 0;
+  margin: -2em;
+
+  &__item{
+    margin: 2em;
+  }
+}

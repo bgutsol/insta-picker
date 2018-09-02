@@ -3,8 +3,7 @@ import UserContainer from 'Containers/UserContainer';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Tag Picker</h1>
+    <div className='home'>
       <UserContainer/>
     </div>
   );
