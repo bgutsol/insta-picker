@@ -13,7 +13,7 @@
   }
 
   h2{
-    font-size: 3.4rem;
+    font-size: 3.2rem;
   }
 
   h3{
@@ -70,7 +70,11 @@
     }
   }
 
-  @include mq(1024){
+  @include mq(768){
+
+    h2{
+      font-size: 3.4rem;
+    }
 
     p,
     ol, ul{

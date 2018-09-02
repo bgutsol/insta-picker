@@ -1,7 +1,9 @@
 @import 'Styles/_configs.scss';
+@import 'Styles/helpers/_mixin_core.scss';
 
 .card {
   display: block;
+  max-width: 100%;
   width: 32rem;
   height: 32rem;
   border-radius: .5rem;

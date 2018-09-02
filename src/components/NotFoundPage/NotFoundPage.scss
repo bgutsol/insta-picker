@@ -1,0 +1,19 @@
+@import 'Styles/_configs.scss';
+
+.not-found-page {
+  padding-top: 2rem;
+
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    color: $black;
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: underline;
+    font-size: 2rem;
+  }
+}

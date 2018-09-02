@@ -1,12 +1,21 @@
 @import 'Styles/_configs.scss';
+@import 'Styles/helpers/_mixin_core.scss';
 
 .user-cards{
-  display: flex;
-  flex-wrap: wrap;
   padding: 3em 0;
-  margin: -2em;
+  margin: -2em 0;
 
   &__item{
-    margin: 2em;
+    margin: 2em 0;
+  }
+
+  @include mq(768) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2em;
+
+    &__item{
+      margin: 2em;
+    }
   }
 }

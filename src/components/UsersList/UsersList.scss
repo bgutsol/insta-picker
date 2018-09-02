@@ -1,13 +1,22 @@
 @import 'Styles/_configs.scss';
+@import 'Styles/helpers/_mixin_core.scss';
 
 .users-list{
   &__item{
-    margin-top: 3rem;
+    margin-top: 4rem;
 
     &-title{
-      font-size: 4rem;
+      font-size: 3.2rem;
       font-family: $secondary-font;
       color: $black;
+    }
+  }
+
+  @include mq(768) {
+    &__item{
+      &-title{
+        font-size: 4rem;
+      }
     }
   }
 }

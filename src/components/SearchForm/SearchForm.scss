@@ -5,14 +5,13 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 46rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   &__input {
     display: block;
     width: 100%;
     padding: 1.5rem 5.6rem 1.5rem 2rem;
     font-size: 2rem;
-    font-family: inherit;
     color: $black;
     border: 2px solid $black-light;
     transition: box-shadow $fast-transition;
@@ -21,7 +20,6 @@
     -webkit-appearance: none;
 
     &:focus {
-      border-color: $black;
       box-shadow: 0 1rem 2rem 0 rgba(208, 223, 232, .32), 0 0 0 0.4rem rgba(24,144,255,.2);
     }
 

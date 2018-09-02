@@ -1,0 +1,35 @@
+@import 'Styles/_configs.scss';
+
+.login{
+  &__text{
+    font-family: $secondary-font;
+    font-weight: 700;
+    color: $black;
+    font-size: 3.2rem;
+    max-width: 50rem;
+    margin-bottom: 3rem;
+  }
+
+  &__btn{
+    display: inline-block;
+    padding: 1.3rem 5.6rem 1.3rem;
+    font-size: 2rem;
+    color: $black;
+    border: 2px solid $black-light;
+    background-color: transparent;
+    transition: $fast-transition;
+    transition-property: background-color, color;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem 0 rgba(208, 223, 232, .32);
+
+    &:focus {
+      box-shadow: 0 1rem 2rem 0 rgba(208, 223, 232, .32), 0 0 0 0.4rem rgba(24,144,255,.2);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $black;
+      color: #fff;
+    }
+  }
+}

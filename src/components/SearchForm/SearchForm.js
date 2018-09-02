@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
-import Input from 'Components/Input';
 import './SearchForm.scss';
 
 const SearchForm = ({onChange, onSubmit, value}) => {
