@@ -5,15 +5,14 @@ const AboutPage = () => {
   return (
     <div className='about-page'>
       <div className="about-page__text rich-text">
-        <h2>What I did</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nostrum quae quidem? A amet cupiditate dolor
-          dolore esse ipsum labore magni maxime nemo officia quas sequi tempora veritatis, vero voluptas!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nostrum quae quidem? A amet cupiditate dolor
-          dolore esse ipsum labore magni maxime nemo officia quas sequi tempora veritatis, vero voluptas!</p>
-
-        <h2>Assumptions and Problems</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nostrum quae quidem? A amet cupiditate dolor
-          dolore esse ipsum labore magni maxime nemo officia quas sequi tempora veritatis, vero voluptas!</p>
+        <h2>WTF</h2>
+        <p>Through this app you can search recently added media with definite
+          hashtag. It's using Instagram public API for fetching media. Now App is in a SANDBOX MODE, so you cannot
+          easily authorize and use it, because of Instagram API
+          restrictions. So, to test it you have to contact me and I will add you as a sandbox user. Then you will be
+          able to authorize and fetch your account media.</p>
+        <p>Please, note, that you need to have some recently added
+          photos, with tags, in your account, to be able to search among them.</p>
       </div>
     </div>
   );
