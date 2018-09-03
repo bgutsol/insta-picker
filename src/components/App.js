@@ -14,11 +14,11 @@ class App extends React.Component {
       <div className='row'>
         <nav className='main-nav'>
           <NavLink exact to="/" className='main-nav__link' activeClassName={activeClassName}>Home</NavLink>
-          <NavLink to="/about" className='main-nav__link' activeClassName={activeClassName}>About</NavLink>
+          <NavLink exact to="/about" className='main-nav__link' activeClassName={activeClassName}>About</NavLink>
         </nav>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
+          <Route exact path="/about" component={AboutPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
