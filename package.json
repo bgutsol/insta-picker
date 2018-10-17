@@ -27,6 +27,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.4",
     "@fortawesome/free-solid-svg-icons": "5.3.1",
     "@fortawesome/react-fontawesome": "0.1.2",
+    "copy-webpack-plugin": "4.5.3",
     "object-assign": "4.1.1",
     "react": "16.4.2",
     "react-cookie": "3.0.4",

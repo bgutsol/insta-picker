@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
 const GLOBALS = {
@@ -67,6 +68,9 @@ export default {
       // Note that you can add custom options here if you need to handle other custom logic in index.html
     }),
 
+    new CopyWebpackPlugin([
+      { from: 'static' }
+    ])
   ],
   module: {
     rules: [
